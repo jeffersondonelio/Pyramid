@@ -9,15 +9,20 @@ class Pyramid
 		//-setar a quantidade de linha para o loop
 		$i = $rows;
 		
-		while ($i--){ 
-			//-ver quantidade de asteriscos
-			$qtd = ($rows - $i);
+		//-verifica se o numero é maior que 0
+		if($i > 0){
+			while ($i--){ 
+				//-ver quantidade de asteriscos
+				$qtd = ($rows - $i);
 
-			//-adicionar espaços
-			echo str_repeat(' ', $i);
+				//-adicionar espaços
+				echo str_repeat(' ', $i);
 
-			//-adicionar quantidade de asteriscos
-			echo str_repeat('* ', $qtd)."\n";
+				//-adicionar quantidade de asteriscos
+				echo str_repeat('* ', $qtd)."\n";
+			}
+		}else{
+			echo "Digite um numero maior que 0";
 		}
     }
 
@@ -27,7 +32,7 @@ class Pyramid
 <pre>
 <?php 
 	//-Numero de linhas que deseja que a piramide tenha.
-	$n = 5;
+	$n = -5;
 
 	//- Inicia o objecto com a quantidade de linhas para a piramide
 	$Pyramid =  new Pyramid($n);
