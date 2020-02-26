@@ -26,7 +26,10 @@ class Pyramid
 
 <pre>
 <?php 
+	//-Numero de linhas que deseja que a piramide tenha.
+	$n = 5;
+
 	//- Inicia o objecto com a quantidade de linhas para a piramide
-	$pyramid =  new Pyramid(10);
+	$Pyramid =  new Pyramid($n);
 ?>
 </pre>
